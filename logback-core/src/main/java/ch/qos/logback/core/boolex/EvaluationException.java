@@ -15,6 +15,7 @@ package ch.qos.logback.core.boolex;
 
 /**
  * This exception wraps exceptions thrown while evaluating events.
+ * 事件评估异常
  * 
  * @author Ceki G&uuml;lc&uuml;
  */

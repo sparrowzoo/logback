@@ -22,6 +22,7 @@ import ch.qos.logback.core.spi.LifeCycle;
  * An object that manages a collection of components that implement the
  * {@link LifeCycle} interface.  Each component that is added to the manager
  * will be stopped and removed from the manager when the manager is reset.
+ * 这是一个管理生命周期实现组件集合的对象，每个被加进来的组件将会被stop并从管理器中移除，当管理器 reset 时.
  *
  * @author Carl Harris
  */

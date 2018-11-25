@@ -18,6 +18,9 @@ import java.util.List;
 
 import ch.qos.logback.core.CoreConstants;
 
+/**
+ * 将异常转成字符数组
+ */
 public class ThrowableToStringArray {
 
     public static String[] convert(Throwable t) {

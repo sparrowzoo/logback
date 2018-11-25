@@ -18,10 +18,13 @@ import ch.qos.logback.core.spi.LifeCycle;
 
 /**
  * Evaluates whether a given an event matches user-specified criteria.
+ *
+ * 评估是否给定的事件match上用户指定的条件
  * 
  * <p>
  * Implementations are free to evaluate the event as they see fit. In
  * particular, the evaluation results <em>may</em> depend on previous events.
+ * 实现自由地评估它们看到的固定事件，实际上，这个评估结果可能依赖上一个事件
  * 
  * @author Ceki G&uuml;lc&uuml;
  */
@@ -31,13 +34,17 @@ public interface EventEvaluator<E> extends ContextAware, LifeCycle {
     /**
      * Evaluates whether the event passed as parameter matches some user-specified
      * criteria.
+     *
+     * 评估作为参数传递的event 是否match用户特定的条件
      * 
      * <p>
      * The <code>Evaluator</code> is free to evaluate the event as it pleases. In
      * particular, the evaluation results <em>may</em> depend on previous events.
-     * 
+     *
+     * 评估器自由的评估它喜欢的事件，实际上，事件评估的结果可能依赖上一个事件
+     *
      * @param event
-     *          The event to evaluate
+     *          The event to evaluate 待评估的事件
      * @return true if there is a match, false otherwise.
      * @throws NullPointerException
      *           can be thrown in presence of null values

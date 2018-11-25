@@ -20,15 +20,21 @@ import ch.qos.logback.core.CoreConstants;
 import ch.qos.logback.core.Layout;
 import ch.qos.logback.core.OutputStreamAppender;
 
+/**
+ * 封装layout 的编码器
+ * @param <E>
+ */
 public class LayoutWrappingEncoder<E> extends EncoderBase<E> {
 
     protected Layout<E> layout;
 
     /**
      * The charset to use when converting a String into bytes.
+     * 用于将字符串转化为byte节流的字符集
      * <p>
      * By default this property has the value {@code null} which corresponds to
      * the system's default charset.
+     * 默认为null与系统默认的字符串相同
      */
     private Charset charset;
 
@@ -64,7 +70,8 @@ public class LayoutWrappingEncoder<E> extends EncoderBase<E> {
      * Sets the immediateFlush option. The default value for immediateFlush is 'true'. If set to true,
      * the doEncode() method will immediately flush the underlying OutputStream. Although immediate flushing
      * is safer, it also significantly degrades logging throughput.
-     *
+     * 设置是否立即刷新选项，这个默认的值是true,如果这个值是true ,那么doencode 方法被调用时会立即刷新潜在的输出流，虽然立即刷新是这全的，
+     * 但也是明显地降低日志的吐吞量
      * @since 1.0.3
      */
     public void setImmediateFlush(boolean immediateFlush) {
@@ -73,6 +80,10 @@ public class LayoutWrappingEncoder<E> extends EncoderBase<E> {
         this.immediateFlush = immediateFlush;
     }
 
+    /**
+     * 获取layout 的头部字节流
+     * @return
+     */
     @Override
     public byte[] headerBytes() {
         if (layout == null)
@@ -90,6 +101,10 @@ public class LayoutWrappingEncoder<E> extends EncoderBase<E> {
         return convertToBytes(sb.toString());
     }
 
+    /**
+     * 获取layout 的尾部字节流
+     * @return
+     */
     @Override
     public byte[] footerBytes() {
         if (layout == null)
@@ -101,6 +116,11 @@ public class LayoutWrappingEncoder<E> extends EncoderBase<E> {
         return convertToBytes(sb.toString());
     }
 
+    /**
+     * 将字符串转成字节流
+     * @param s
+     * @return
+     */
     private byte[] convertToBytes(String s) {
         if (charset == null) {
             return s.getBytes();
@@ -109,6 +129,11 @@ public class LayoutWrappingEncoder<E> extends EncoderBase<E> {
         }
     }
 
+    /**
+     * 字事件对象转成layout 字符后再转成字节流
+     * @param event
+     * @return
+     */
     public byte[] encode(E event) {
         String txt = layout.doLayout(event);
         return convertToBytes(txt);

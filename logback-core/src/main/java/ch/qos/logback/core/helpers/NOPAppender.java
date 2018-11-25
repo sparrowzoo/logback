@@ -15,6 +15,10 @@ package ch.qos.logback.core.helpers;
 
 import ch.qos.logback.core.AppenderBase;
 
+/**
+ * NOP（空操作)
+ * @param <E>
+ */
 final public class NOPAppender<E> extends AppenderBase<E> {
 
     @Override

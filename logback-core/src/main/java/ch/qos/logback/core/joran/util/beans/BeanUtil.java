@@ -3,6 +3,7 @@ package ch.qos.logback.core.joran.util.beans;
 import java.lang.reflect.Method;
 
 /**
+ * 装装标准java bean 方法相关的工具
  * Encapsulates utility methods associated with standard java beans.
  * @author urechm
  */
@@ -19,6 +20,7 @@ public class BeanUtil {
      *
      * @param method to check if it is an 'adder' method.
      * @return true if the given method is an 'adder' method.
+     * 是否为adder 方法
      */
     static public boolean isAdder(Method method) {
         int parameterCount = getParameterCount(method);

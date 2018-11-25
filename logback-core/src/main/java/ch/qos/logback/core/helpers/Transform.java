@@ -17,7 +17,8 @@ import java.util.regex.Pattern;
 
 /**
  * Utility class for transforming strings.
- * 
+ *
+ * 转换字符串的工具类
  * @author Ceki G&uuml;lc&uuml;
  * @author Michael A. McAngus
  */
@@ -33,6 +34,7 @@ public class Transform {
      * This method takes a string which may contain HTML tags (ie, &lt;b&gt;,
      * &lt;table&gt;, etc) and replaces any '&lt;','&gt;' ... characters with
      * respective predefined entity references.
+     * 这个方法处理包括HTML标签的字符串，并且分别用预定义好的实体引用来替换
      * 
      * @param input
      *          The text to be converted.

@@ -17,7 +17,7 @@ import java.io.ByteArrayOutputStream;
 
 public class ByteArrayUtil {
 
-    // big-endian
+    // big-endian 字节序存储
     static void writeInt(byte[] byteArray, int offset, int i) {
         for (int j = 0; j < 4; j++) {
             int shift = 24 - j * 8;

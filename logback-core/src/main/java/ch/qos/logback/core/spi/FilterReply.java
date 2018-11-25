@@ -19,10 +19,14 @@ package ch.qos.logback.core.spi;
  * in logback can return. It is used by implementations of both 
  * {@link ch.qos.logback.core.filter.Filter Filter} and
  * ch.qos.logback.classic.turbo.TurboFilter abstract classes.
+ *
+ * 这个枚举代表着过滤组件可能的答复在logback中，它被以下两个实现类使用
  * 
  * Based on the order that the FilterReply values are declared,
  * FilterReply.ACCEPT.compareTo(FilterReply.DENY) will return 
  * a positive value.
+ * 其于顺序，FilterReply的值被定义为如下，
+ * accept < deny
  *
  * @author S&eacute;bastien Pennec
  */

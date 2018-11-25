@@ -25,6 +25,7 @@ import ch.qos.logback.core.status.StatusManager;
 
 /**
  * A context is the main anchorage point of all logback components.
+ * 上下文是 logback 组件的主要锚点
  * 
  * @author Ceki Gulcu
  * 

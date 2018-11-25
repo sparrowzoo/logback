@@ -18,9 +18,11 @@ import java.util.List;
 
 /**
  * CyclicBuffer holds values in a cyclic array.
+ * 在环型数组中持有值的cyclic buffer
  * 
  * <p>It allows read access to any element in the buffer not just the first or
  * last element.
+ * 它允许读任一个在buffer中的element 不只是第一个或最后一个
  * 
  * @author Ceki G&uuml;lc&uuml;
  */
