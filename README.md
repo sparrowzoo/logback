@@ -10,6 +10,8 @@ the docs/ folder of the logback distribution.
 
 #Building logback
 
+`git checkout 1.2.x`
+
 Building logback is documented at:
   
      mvn clean install //not mvn clean instll -Dmaven.test.skip 

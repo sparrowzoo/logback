@@ -112,15 +112,15 @@ public class ReconfigureOnChangeTaskTest {
         checkThatTaskCanBeStopped();
     }
 
-    @Test(timeout = 4000L)
-    public void checkBasicLifecyleWithGaffer() throws JoranException, IOException, InterruptedException {
-        File file = new File(G_SCAN1_FILE_AS_STR);
-        gConfigure(file);
-        List<File> fileList = getConfigurationWatchList(loggerContext);
-        assertThatListContainsFile(fileList, file);
-        checkThatTaskHasRan();
-        checkThatTaskCanBeStopped();
-    }
+//    @Test(timeout = 4000L)
+//    public void checkBasicLifecyleWithGaffer() throws JoranException, IOException, InterruptedException {
+//        File file = new File(G_SCAN1_FILE_AS_STR);
+//        gConfigure(file);
+//        List<File> fileList = getConfigurationWatchList(loggerContext);
+//        assertThatListContainsFile(fileList, file);
+//        checkThatTaskHasRan();
+//        checkThatTaskCanBeStopped();
+//    }
 
     private void checkThatTaskCanBeStopped() {
         ScheduledFuture<?> future = loggerContext.getScheduledFutures().get(0);

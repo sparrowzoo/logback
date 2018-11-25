@@ -189,12 +189,12 @@ public class IncludeActionTest {
         assertTrue(statusChecker.containsException(MalformedURLException.class));
     }
 
-    @Test
-    public void unknownURL() throws JoranException {
-        System.setProperty(INCLUDE_KEY, "http://logback2345.qos.ch");
-        tc.doConfigure(TOP_BY_URL);
-        assertEquals(Status.WARN, statusChecker.getHighestLevel(0));
-    }
+//    @Test
+//    public void unknownURL() throws JoranException {
+//        System.setProperty(INCLUDE_KEY, "http://logback2345.qos.ch");
+//        tc.doConfigure(TOP_BY_URL);
+//        assertEquals(Status.WARN, statusChecker.getHighestLevel(0));
+//    }
 
     @Test
     public void nestedInclude() throws JoranException {
