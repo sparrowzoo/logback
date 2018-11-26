@@ -49,6 +49,7 @@ public class RollingCalendar extends GregorianCalendar {
     public RollingCalendar(String datePattern) {
         super();
         this.datePattern = datePattern;
+        System.err.println("date pattern "+datePattern);
         this.periodicityType = computePeriodicityType();
     }
 

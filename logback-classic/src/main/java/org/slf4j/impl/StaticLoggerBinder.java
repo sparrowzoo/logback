@@ -52,6 +52,7 @@ public class StaticLoggerBinder implements LoggerFactoryBinder {
     private static Object KEY = new Object();
 
     static {
+        System.err.println("[static] block StaticLoggerBinder init");
         SINGLETON.init();
     }
 
@@ -81,6 +82,7 @@ public class StaticLoggerBinder implements LoggerFactoryBinder {
     void init() {
         try {
             try {
+                System.err.println("ContextInitializer.autoConfig");
                 new ContextInitializer(defaultLoggerContext).autoConfig();
             } catch (JoranException je) {
                 Util.report("Failed to auto configure default logger context", je);

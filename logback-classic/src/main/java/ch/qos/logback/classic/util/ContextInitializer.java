@@ -116,6 +116,7 @@ public class ContextInitializer {
     }
 
     public URL findURLOfDefaultConfigurationFile(boolean updateStatus) {
+        System.err.println("find config config order \n1."+TEST_AUTOCONFIG_FILE+";\n2."+GROOVY_AUTOCONFIG_FILE+";\n3."+AUTOCONFIG_FILE);
         ClassLoader myClassLoader = Loader.getClassLoaderOfObject(this);
         URL url = findConfigFileURLFromSystemProperties(myClassLoader, updateStatus);
         if (url != null) {
@@ -149,6 +150,7 @@ public class ContextInitializer {
         if (url != null) {
             configureByResource(url);
         } else {
+            System.err.println("\n4. SPI EnvUtil.loadFromServiceLoader(Configurator.class)");
             Configurator c = EnvUtil.loadFromServiceLoader(Configurator.class);
             if (c != null) {
                 try {
