@@ -19,7 +19,7 @@ import java.util.regex.PatternSyntaxException;
 import ch.qos.logback.core.spi.ContextAwareBase;
 import ch.qos.logback.core.spi.LifeCycle;
 
-public class Matcher extends ContextAwareBase implements LifeCycle {
+public class  Matcher extends ContextAwareBase implements LifeCycle {
 
     private String regex;
     private String name;
