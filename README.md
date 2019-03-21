@@ -13,7 +13,9 @@ the docs/ folder of the logback distribution.
 Building logback is documented at:
 
   https://logback.qos.ch/setup.html#ide
-
+```
+  mvn clean install -Dmaven.test.skip
+```
 #In case of problems
 
 In case of problems please do not hesitate to post an e-mail message
